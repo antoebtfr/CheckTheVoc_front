@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h3 id="homepage-title"> Check The Voc</h3>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="menu-home-shortcuts">
+
+    <div *ngFor="let shortcut of menuShortCuts" class="menu-home-shortcut">
+      <ion-icon *ngIf="shortcut.logo" [name]="shortcut.logo" class="shortcut-icon">
+      </ion-icon>
+      {{shortcut.title}}
+    </div>
+
+  </div>
+
+  <div class="links-container">
+    <div *ngFor="let link of menuLinksTo" class="menu-link">
+      <ion-icon *ngIf="link.logo" [name]="link.logo" class="shortcut-icon">
+      </ion-icon>
+
+      {{link.title}}
+    </div>
   </div>
 </ion-content>
