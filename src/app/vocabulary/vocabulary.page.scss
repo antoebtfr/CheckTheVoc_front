@@ -1,0 +1,13 @@
+ion-content, ion-toolbar, ion-list, ion-label, ion-item, ion-searchbar{
+    --background: var(--main-background-color) !important;
+    --color: var(--main-text-color);
+}
+
+h5{
+    text-align: center;
+    margin: 10px 0;
+}
+
+ion-list{
+    background: none;
+}

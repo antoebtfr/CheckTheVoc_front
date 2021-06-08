@@ -14,9 +14,9 @@ export class HomePage {
     {title: 'Quizz aélatoire', logo: 'dice-outline', link: ''},
   ];
 
-  public menuLinksTo = [
+  public menuButtonsTo = [
     {title: 'Livres', logo: undefined, link: ''},
-    {title: 'Vocabualaires', logo: undefined, link: ''}
+    {title: 'Vocabulaires', logo: undefined, link: 'vocabulary'}
   ];
 
 }

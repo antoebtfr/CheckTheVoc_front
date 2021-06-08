@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'vocabulary',
+    loadChildren: () => import('./vocabulary/vocabulary.module').then( m => m.VocabularyPageModule)
+  },
 ];
 
 @NgModule({

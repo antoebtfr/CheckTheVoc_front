@@ -16,8 +16,8 @@ ion-content {
 .menu-home-shortcut {
   min-height: 30px;
   min-width: 150px;
-  background-color: rgb(27, 27, 27);
-  color: white;
+  background-color: var(--secondary-button-background-color);
+  color: var(--secondary-button-text-color);
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -48,9 +48,9 @@ ion-content {
   min-height: 40px;
   min-width: 80vw;
   width: 90vw;
-  background-color:rgb(27, 27, 27);
+  --background: var(--main-button-background-color);
   margin-bottom: 15px;
-  color: white;
+  color: var(--main-button-text-color);
   font-size: 18px;
   display: flex;
   flex-flow: row wrap;
