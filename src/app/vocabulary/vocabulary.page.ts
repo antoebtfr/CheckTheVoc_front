@@ -16,4 +16,10 @@ export class VocabularyPage implements OnInit {
     'test', 'test2', 'test4'
   ]
 
+  public searchbarIsEmpty = true;
+
+  public searchbarValueChange(event): void{
+    this.searchbarIsEmpty = event.detail.value.length > 0 ? false : true; 
+  }
+
 }

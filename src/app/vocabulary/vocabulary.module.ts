@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { VocabularyPageRoutingModule } from './vocabulary-routing.module';
 
 import { VocabularyPage } from './vocabulary.page';
+import { VocabularySearchComponent } from '../components/vocabulary-search/vocabulary-search.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { VocabularyPage } from './vocabulary.page';
     IonicModule,
     VocabularyPageRoutingModule
   ],
-  declarations: [VocabularyPage]
+  declarations: [
+    VocabularyPage,
+    VocabularySearchComponent
+  ]
 })
 export class VocabularyPageModule {}

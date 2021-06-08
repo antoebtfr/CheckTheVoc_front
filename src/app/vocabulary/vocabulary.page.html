@@ -8,13 +8,18 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar (ionChange)="searchbarValueChange($event)"></ion-searchbar>
 
-  <h5> Derniers mots de vocabulaires enregistrés</h5>
+  <section id="vocabulary-last-words" *ngIf="searchbarIsEmpty">
 
-  <ion-list lines='full'>
-    <ion-item *ngFor='let item of testArray'>
-      <ion-label>{{item}}</ion-label>
-    </ion-item>
-  </ion-list>
+    <h5> Derniers mots de vocabulaires enregistrés</h5>
+
+    <ion-list lines='full'>
+      <ion-item *ngFor='let item of testArray'>
+        <ion-label>{{item}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </section>
+
+  <app-vocabulary-search *ngIf="!searchbarIsEmpty"></app-vocabulary-search>
 </ion-content>
