@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'vocabulary',
     loadChildren: () => import('./vocabulary/vocabulary.module').then( m => m.VocabularyPageModule)
   },
+  {
+    path: 'books',
+    loadChildren: () => import('./books/books.module').then( m => m.BooksPageModule)
+  },
 ];
 
 @NgModule({

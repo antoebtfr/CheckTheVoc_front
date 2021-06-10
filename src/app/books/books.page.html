@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Livres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="books-container">
+    <ion-card *ngFor="let book of fakeBooks" [style.backgroundImage]="'url(' + book.cover + ')'" class="book">
+      <ion-card-header>
+        <ion-card-title>
+          
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+</ion-content>

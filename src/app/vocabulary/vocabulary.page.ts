@@ -12,11 +12,11 @@ export class VocabularyPage implements OnInit {
   ngOnInit() {
   }
 
-  public testArray = [
+  public lastWords = [
     'test', 'test2', 'test4'
   ]
 
-  public searchbarIsEmpty = true;
+  public searchbarIsEmpty = false;
 
   public searchbarValueChange(event): void{
     this.searchbarIsEmpty = event.detail.value.length > 0 ? false : true; 

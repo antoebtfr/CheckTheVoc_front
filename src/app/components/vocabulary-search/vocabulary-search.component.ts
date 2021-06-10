@@ -11,4 +11,7 @@ export class VocabularySearchComponent implements OnInit {
 
   ngOnInit() {}
 
+  public allVocabs = [
+    'testws', 'bonbon', 'wstest', 'camion'
+  ]
 }

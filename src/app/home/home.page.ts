@@ -15,7 +15,7 @@ export class HomePage {
   ];
 
   public menuButtonsTo = [
-    {title: 'Livres', logo: undefined, link: ''},
+    {title: 'Livres', logo: undefined, link: 'books'},
     {title: 'Vocabulaires', logo: undefined, link: 'vocabulary'}
   ];
 

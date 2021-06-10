@@ -1,0 +1,30 @@
+ion-content, ion-toolbar, ion-list, ion-label, ion-item, ion-searchbar{
+    --background: var(--main-background-color) !important;
+    --color: var(--main-text-color);
+}
+
+h5{
+    text-align: center;
+    margin: 10px 0;
+}
+
+ion-list{
+    background: none;
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+.book{
+    width: 40vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.books-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
