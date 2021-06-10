@@ -8,12 +8,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar placeholder="Rechercher un livre"></ion-searchbar>
+  <ion-searchbar placeholder="Rechercher un livre" (ionChange)="searchBooks($event)"></ion-searchbar>
 
   <div class="books-container">
     <ion-card (click)="goToBookDetails(book)" *ngFor="let book of fakeBooks" [style.backgroundImage]="'url(' + book.cover + ')'" class="book">
-      <ion-card-header>
-      </ion-card-header>
     </ion-card>
   </div>
 

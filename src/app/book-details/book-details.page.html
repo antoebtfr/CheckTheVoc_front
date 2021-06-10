@@ -8,7 +8,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-img [src]="detailledBook.cover"></ion-img>
-  {{detailledBook.title}}
+  <ion-img class="book-detailled-cover"[src]="detailledBook.cover"></ion-img>
+  <h3>{{detailledBook.title}}</h3>
 
+  <div *ngIf="detailledBook.description">
+    {{detailledBook.description}}
+  </div>
 </ion-content>
