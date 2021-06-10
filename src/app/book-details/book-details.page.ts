@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Book } from '../shared/classes/book';
-import { BooksService } from '../shared/services/books.service';
+import { BookService } from '../shared/services/books.service';
 
 @Component({
   selector: 'app-book-details',
@@ -11,7 +11,7 @@ import { BooksService } from '../shared/services/books.service';
 export class BookDetailsPage implements OnInit {
 
   constructor(
-    private bookService: BooksService,
+    private bookService: BookService,
     private router: Router
   ) { }
 
@@ -27,7 +27,6 @@ export class BookDetailsPage implements OnInit {
         this.router.navigate(['books']);
       }
   }
-
 
 
 }
