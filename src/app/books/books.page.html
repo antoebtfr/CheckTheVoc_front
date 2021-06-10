@@ -8,13 +8,11 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar placeholder="Rechercher un livre"></ion-searchbar>
 
   <div class="books-container">
-    <ion-card *ngFor="let book of fakeBooks" [style.backgroundImage]="'url(' + book.cover + ')'" class="book">
+    <ion-card (click)="goToBookDetails(book)" *ngFor="let book of fakeBooks" [style.backgroundImage]="'url(' + book.cover + ')'" class="book">
       <ion-card-header>
-        <ion-card-title>
-          
-        </ion-card-title>
       </ion-card-header>
     </ion-card>
   </div>

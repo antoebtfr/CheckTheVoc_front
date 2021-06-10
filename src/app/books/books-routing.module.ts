@@ -4,10 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { BooksPage } from './books.page';
 
 const routes: Routes = [
+  { path: '', component: BooksPage },
   {
-    path: '',
-    component: BooksPage
-  }
+    path: 'details',
+    loadChildren: () => import('../book-details/book-details.module').then( m => m.BookDetailsPageModule)
+  },
 ];
 
 @NgModule({
