@@ -12,6 +12,7 @@ export class HomePage {
   public menuShortCuts = [
     {title: 'Jouer une partie', logo: 'game-controller-outline', link: ''},
     {title: 'Quizz aélatoire', logo: 'dice-outline', link: ''},
+    {title: 'Ajouter un mot', logo: 'add-outline', link : 'add-vocab'},
   ];
 
   public menuButtonsTo = [

@@ -1,0 +1,20 @@
+ion-content, ion-toolbar, ion-list, ion-label, ion-item, ion-searchbar{
+    --background: var(--main-background-color) !important;
+    --color: var(--main-text-color);
+}
+
+
+#new-vocab{
+   // --background: #3c3c3c29;
+    text-align: center;
+    height: 30vh;
+    font-size: 25px;
+    width: 100vw;
+}
+
+#new-vocab-form{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}

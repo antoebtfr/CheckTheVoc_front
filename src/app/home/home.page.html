@@ -3,7 +3,7 @@
 
   <div class="menu-home-shortcuts">
 
-    <div *ngFor="let shortcut of menuShortCuts" class="menu-home-shortcut">
+    <div *ngFor="let shortcut of menuShortCuts" class="menu-home-shortcut" [routerLink]="['../' + shortcut.link]">
       <ion-icon *ngIf="shortcut.logo" [name]="shortcut.logo" class="shortcut-icon">
       </ion-icon>
       {{shortcut.title}}

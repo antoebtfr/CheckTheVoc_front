@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter un mot</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <form (ngSubmit)="addNewVocab()" [formGroup]="newVocabForm" id="new-vocab-form">
+  <ion-input id="new-vocab" placeholder='Nouveau mot ici' pattern="text"></ion-input>
+
+
+  <ion-item>
+    <ion-label>
+      Livre
+    </ion-label>
+    <ion-select>
+      <ion-select-option value="test"> Test</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button type="submit">Ajouter !</ion-button> 
+</form>
+</ion-content>

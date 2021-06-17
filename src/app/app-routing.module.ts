@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'books',
     loadChildren: () => import('./books/books.module').then( m => m.BooksPageModule)
   },
+  {
+    path: 'add-vocab',
+    loadChildren: () => import('./add-vocabulary/add-vocabulary.module').then( m => m.AddVocabularyPageModule)
+  },
 
 ];
 
