@@ -7,13 +7,14 @@
     <h5> Derniers mots de vocabulaires enregistrés</h5>
 
     <ion-list lines='full'>
-      <ion-item *ngFor='let word of lastWords'>
-        <ion-label>{{word.name}}</ion-label>
+      <ion-item *ngFor='let vocab of lastVocabs' (click)="goToDetails(vocab)">
+        <ion-label>{{vocab.name}}</ion-label>
       </ion-item>
     </ion-list>
   </section>
 
+  <ul *ngIf="!searchbarIsEmpty">
+    <li *ngFor="let vocab of allVocabs">{{vocab.name}}</li>
+  </ul>
 
-
-  <p *ngFor="let vocab of allVocabs">{{vocab.name}}</p>
 </section>

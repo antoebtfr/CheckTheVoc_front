@@ -10,8 +10,6 @@ export class VocabularyPage implements OnInit {
   constructor(
   ) { }
 
-
-
   ngOnInit() {
   
   }

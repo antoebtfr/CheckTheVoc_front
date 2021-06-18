@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: VocabularyPage
-  }
+  }, 
+  {
+    path: 'details',
+    loadChildren: () => import('../vocab-details/vocab-details.module').then( m => m.VocabDetailsPageModule)
+  },
 ];
 
 @NgModule({

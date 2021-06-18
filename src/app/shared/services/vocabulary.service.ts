@@ -14,19 +14,19 @@ export class VocabularyService {
 
   private URL = '../../assets/fakeDatas/fakeVocabs.json';
 
-  private currentDetailledBook: Vocabulary = {
+  private detailledOne: Vocabulary = {
     id: undefined,
     name: undefined,
     bookId: undefined,
     definition: undefined,
   }
 
-  public setDetailledBook(vocabulary: Vocabulary) {
-    this.currentDetailledBook = vocabulary;
+  public setDetails(vocabulary: Vocabulary) {
+    this.detailledOne = vocabulary;
   }
 
-  public getCurrentDetailledBook(): Vocabulary {
-    return this.currentDetailledBook;
+  public getDetails(): Vocabulary {
+    return this.detailledOne;
   }
 
   public getAll(): Observable<Vocabulary[]>{

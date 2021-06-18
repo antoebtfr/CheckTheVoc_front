@@ -24,6 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./add-vocabulary/add-vocabulary.module').then( m => m.AddVocabularyPageModule)
   },
 
+
 ];
 
 @NgModule({
