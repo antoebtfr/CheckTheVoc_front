@@ -18,9 +18,11 @@
     <ion-label>
       Livre
     </ion-label>
+  
     <ion-select>
-      <ion-select-option value="test"> Test</ion-select-option>
+      <ion-select-option *ngFor="let book of listBooks" [value]="book.id"> {{book.title}}</ion-select-option>
     </ion-select>
+    
   </ion-item>
 
   <ion-button type="submit">Ajouter !</ion-button> 

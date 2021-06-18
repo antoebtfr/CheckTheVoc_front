@@ -76,8 +76,16 @@ body{
     --main-button-text-color: white;
     --secondary-button-background-color: #1b1b1b;
     --secondary-button-text-color: white;
+	background: red;
 }
 
 h3{
     font-size: 28px;
+}
+
+.list-md{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-bottom: 10px !important;
+	margin-top: 10px !important;
 }

@@ -8,18 +8,5 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar (ionChange)="searchbarValueChange($event)"></ion-searchbar>
-
-  <section id="vocabulary-last-words" *ngIf="searchbarIsEmpty">
-
-    <h5> Derniers mots de vocabulaires enregistrés</h5>
-
-    <ion-list lines='full'>
-      <ion-item *ngFor='let word of lastWords'>
-        <ion-label>{{word}}</ion-label>
-      </ion-item>
-    </ion-list>
-  </section>
-
-  <app-vocabulary-search *ngIf="!searchbarIsEmpty"></app-vocabulary-search>
+  <app-vocabulary-search></app-vocabulary-search>
 </ion-content>

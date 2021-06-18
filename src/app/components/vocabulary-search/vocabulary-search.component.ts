@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vocabulary } from 'src/app/shared/classes/vocabulary';
+import { VocabularyService } from 'src/app/shared/services/vocabulary.service';
 
 @Component({
   selector: 'app-vocabulary-search',
@@ -7,11 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VocabularySearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private vocabService: VocabularyService,
+  ) { }
+  
+  public allVocabs: Vocabulary[];
+  public lastWords: Vocabulary[];
+  public searchbarIsEmpty = true;
+  
+  ngOnInit() {
+    this.vocabService.getAll().subscribe(data => { this.allVocabs = data});
+    this.vocabService.getAll().subscribe(data => { this.lastWords = data.slice(0, 9)});
+  }
 
-  ngOnInit() {}
+  public searchVocabs(event) {
+    let regExp = new RegExp(event.detail.value, 'gim');
+    this.vocabService.getAll().subscribe( data => {
+      this.allVocabs = data.filter(x => x.name.match(regExp));
+    })
+  }
 
-  public allVocabs = [
-    'testws', 'bonbon', 'wstest', 'camion'
-  ]
+  public searchbarValueChange(event): void{
+    this.searchbarIsEmpty = event.detail.value.length > 0 ? false : true; 
+  }
+
+
 }

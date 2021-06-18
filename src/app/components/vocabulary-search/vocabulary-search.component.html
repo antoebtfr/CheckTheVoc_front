@@ -1,3 +1,19 @@
 <section>
-  <p *ngFor="let vocab of allVocabs">{{vocab}}</p>
+
+  <ion-searchbar (ionChange)="searchbarValueChange($event)"></ion-searchbar>
+
+  <section id="vocabulary-last-words" *ngIf="searchbarIsEmpty">
+
+    <h5> Derniers mots de vocabulaires enregistrés</h5>
+
+    <ion-list lines='full'>
+      <ion-item *ngFor='let word of lastWords'>
+        <ion-label>{{word.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </section>
+
+
+
+  <p *ngFor="let vocab of allVocabs">{{vocab.name}}</p>
 </section>
